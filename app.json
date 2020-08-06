@@ -1,0 +1,78 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/merchant/merchant",
+    "pages/me/me"
+  ],
+  "subpackages": [
+    {
+      "root": "packageindex",
+      "pages": [
+        "login/login",
+        "qrcode/qrcode",
+        "password_sp/password_sp",
+        "homePage_ads/homePage_ads",
+        "passwordinput/passwordinput"
+      ]
+    },{
+      "root": "packagewerchant",
+      "pages": [
+        "payment/payment",
+        "paymentresult/paymentresult",
+        "detailed/detailed",
+        "Product_details/Product_details"
+      ]
+    },{
+      "root": "packageme",
+      "pages": [
+        "information/information",
+        "userpassword/userpassword",
+        "customerservice/customerservice",
+        "scanningPayment/scanningPayment",
+        "paymeng_succ/payment_succ",
+        "payment_fail/payment_fail",
+        "point_balance/point_balance",
+        "changepassword/changepassword",
+        "change_paymenyword/change_paymentword",
+        "findpassword/findpassword"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+        "network": "all", 
+        "packages": [
+            "packagewerchant",
+            "packageme",
+            "packageindex"
+        ]
+    }
+  },
+  "tabBar":{
+    "list":[{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "common/sy_1.png",
+      "selectedIconPath": "common/sy_1_active.png"
+    },{
+      "pagePath": "pages/merchant/merchant",
+      "text": "商户",
+      "iconPath": "common/shop_1.png",
+      "selectedIconPath": "common/shop_1_active.png"
+    },{
+      "pagePath": "pages/me/me",
+      "text": "我的",
+      "iconPath": "common/me_1.png",
+      "selectedIconPath": "common/me_1_active.png"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "CBD积分付",
+    "navigationBarTextStyle":"black"
+  },
+  "debug": true,
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
